@@ -41,7 +41,7 @@ const ContactBanner = () => {
 
           <div className="flex flex-wrap justify-center items-center gap-6 text-secondary-foreground/70">
             <a
-              href="tel:+971500000000"
+              href="tel:+971553285084"
               className="flex items-center space-x-2 hover:text-primary transition-smooth"
             >
               <Phone className="h-4 w-4" />

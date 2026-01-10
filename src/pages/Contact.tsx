@@ -88,7 +88,7 @@ const Contact = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Hello! I'd like to inquire about your luxury transport services.");
-    window.open(`https://wa.me/971500000000?text=${message}`, "_blank");
+    window.open(`https://wa.me/971553285084?text=${message}`, "_blank");
   };
 
   return (
