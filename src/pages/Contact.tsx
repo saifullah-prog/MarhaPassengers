@@ -129,7 +129,7 @@ const Contact = () => {
                 {
                   icon: MapPin,
                   title: "Location",
-                  content: "Dubai Marina, Dubai, UAE",
+                  content: "United Arab Emirates",
                   link: "#",
                 },
                 {

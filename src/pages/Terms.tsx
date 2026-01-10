@@ -127,7 +127,7 @@ const Terms = () => {
                     <p className="mt-3">
                       Email: marhapassengertransport@gmail.com<br />
                       Phone: +971 55 3285084<br />
-                      Address: Dubai Marina, Dubai, UAE
+                      Address: United Arab Emirates
                     </p>
                   </div>
                 </div>

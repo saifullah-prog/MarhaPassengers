@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,20 +28,6 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground mb-4">
               Premier luxury transport services in Dubai, offering premium vehicles and professional chauffeurs for all your transportation needs.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -92,7 +78,7 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-white mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  Dubai Marina, Dubai, United Arab Emirates
+                  United Arab Emirates
                 </span>
               </li>
               <li className="flex items-center space-x-3">
