@@ -49,11 +49,11 @@ const ContactBanner = () => {
             </a>
             <div className="h-4 w-px bg-secondary-foreground/30"></div>
             <a
-              href="mailto:info@dubailuxury.ae"
+              href="mailto:marhapassengertransport@gmail.com"
               className="flex items-center space-x-2 hover:text-primary transition-smooth"
             >
               <Mail className="h-4 w-4" />
-              <span className="text-sm font-inter">info@dubailuxury.ae</span>
+              <span className="text-sm font-inter">marhapassengertransport@gmail.com</span>
             </a>
           </div>
         </div>

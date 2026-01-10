@@ -30,7 +30,7 @@ const Terms = () => {
                   <div>
                     <h2 className="text-3xl font-playfair font-bold text-foreground mb-4">1. Introduction</h2>
                     <p>
-                      Welcome to Marha Passengers Transport LLC. These Terms and Conditions govern your use of our services and website. By booking or using our transportation services, you agree to be bound by these terms.
+                      Welcome to Marha Passengers Transportation LLC. These Terms and Conditions govern your use of our services and website. By booking or using our transportation services, you agree to be bound by these terms.
                     </p>
                   </div>
 
@@ -88,7 +88,7 @@ const Terms = () => {
                   <div>
                     <h2 className="text-3xl font-playfair font-bold text-foreground mb-4">6. Liability and Insurance</h2>
                     <p className="mb-3">
-                      Marha Passengers Transport LLC maintains comprehensive insurance coverage for all vehicles and passengers. However:
+                      Marha Passengers Transportation LLC maintains comprehensive insurance coverage for all vehicles and passengers. However:
                     </p>
                     <ul className="list-disc pl-6 space-y-2">
                       <li>We are not liable for delays caused by traffic, weather, or circumstances beyond our control</li>

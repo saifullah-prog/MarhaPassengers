@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <img 
                 src="/logo.png" 
-                alt="Marha Passengers Transport LLC" 
+                alt="Marha Passengers Transportation LLC" 
                 className="h-12 w-auto object-contain"
               />
               <div className="flex flex-col">
@@ -21,7 +21,7 @@ const Footer = () => {
                   Marha Passengers
                 </span>
                 <span className="text-secondary-foreground text-xs uppercase tracking-wider">
-                  Transport LLC
+                  Transportation LLC
                 </span>
               </div>
             </div>
@@ -101,7 +101,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Marha Passengers Transport LLC. All rights reserved.
+              © {currentYear} Marha Passengers Transportation LLC. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-smooth">

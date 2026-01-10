@@ -20,7 +20,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-playfair font-bold text-secondary-foreground mb-6">
-                About <span className="text-primary">Marha Passengers Transport LLC</span>
+                About <span className="text-primary">Marha Passengers Transportation LLC</span>
               </h1>
               <p className="text-lg text-secondary-foreground/80 font-inter">
                 Setting the standard for premium transportation services in Dubai since 2014.
@@ -39,7 +39,7 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground font-inter leading-relaxed">
                   <p>
-                    Marha Passengers Transport LLC was founded with a simple vision: to provide the finest transportation experience in the UAE. What started as a small fleet of premium vehicles has grown into one of Dubai's most trusted transport companies.
+                    Marha Passengers Transportation LLC was founded with a simple vision: to provide the finest transportation experience in the UAE. What started as a small fleet of premium vehicles has grown into one of Dubai's most trusted transport companies.
                   </p>
                   <p>
                     We understand that transportation is more than just getting from point A to point B. It's about the experience, the comfort, and the peace of mind that comes with knowing you're in capable hands.

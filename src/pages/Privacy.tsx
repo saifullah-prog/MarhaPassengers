@@ -30,7 +30,7 @@ const Privacy = () => {
                   <div>
                     <h2 className="text-3xl font-playfair font-bold text-foreground mb-4">1. Introduction</h2>
                     <p>
-                      Marha Passengers Transport LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services or visit our website.
+                      Marha Passengers Transportation LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services or visit our website.
                     </p>
                   </div>
 

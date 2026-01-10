@@ -215,7 +215,7 @@ const Services = () => {
                 Ready to Book Your <span className="text-primary">Service?</span>
               </h2>
               <p className="text-lg text-secondary-foreground/80 mb-8 font-inter">
-                Contact us today for a customized quote and experience the Marha Passengers Transport LLC difference.
+                Contact us today for a customized quote and experience the Marha Passengers Transportation LLC difference.
               </p>
               <Button
                 size="lg"

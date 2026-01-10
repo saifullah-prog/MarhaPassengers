@@ -6,7 +6,7 @@ const testimonials = [
     name: "Ahmed Al Mansoori",
     role: "CEO, Emirates Tech Solutions",
     content:
-      "Outstanding service! Marha Passengers Transport LLC has been our trusted partner for corporate events and daily staff transportation. Always punctual, professional, and reliable.",
+      "Outstanding service! Marha Passengers Transportation LLC has been our trusted partner for corporate events and daily staff transportation. Always punctual, professional, and reliable.",
     rating: 5,
   },
   {

@@ -40,7 +40,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             <img 
               src="/logo.png" 
-              alt="Marha Passengers Transport LLC" 
+              alt="Marha Passengers Transportation LLC" 
               className="h-12 w-auto object-contain"
             />
             <div className="flex flex-col">
@@ -48,7 +48,7 @@ const Header = () => {
                 Marha Passengers
               </span>
               <span className={`${textColor} text-xs uppercase tracking-wider transition-smooth`}>
-                Transport LLC
+                Transportation LLC
               </span>
             </div>
           </Link>
