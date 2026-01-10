@@ -10,5 +10,4 @@ if (supabaseUrl && supabaseAnonKey) {
 } else {
   console.warn('⚠️ Supabase environment variables are missing');
 }
-
 export { supabase };
