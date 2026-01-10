@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Luxury Black-Gold Theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    /* Rich Green Primary */
+    --primary: 142 70% 40%;
+    --primary-foreground: 0 0% 5%;
+
+    /* Deep Navy Secondary */
+    --secondary: 220 40% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Green Accent */
+    --accent: 142 70% 40%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 142 70% 40%;
+
+    --radius: 0.5rem;
+
+    /* Luxury gradient backgrounds */
+    --gradient-luxury: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(220 40% 15%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(142 70% 40%) 0%, hsl(142 70% 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsla(0 0% 5% / 0.8) 0%, hsla(220 40% 15% / 0.9) 100%);
+    
+    /* Shadows */
+    --shadow-luxury: 0 10px 40px -10px hsla(142 70% 40% / 0.3);
+    --shadow-card: 0 4px 20px hsla(0 0% 0% / 0.08);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 70% 40%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 220 40% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 142 70% 40%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 142 70% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Luxury gradients */
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Premium shadows */
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Luxury button hover effect */
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-luxury;
+  }
+}
