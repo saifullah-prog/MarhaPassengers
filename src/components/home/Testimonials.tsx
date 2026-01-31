@@ -1,31 +1,39 @@
+import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import ReviewCard from "@/components/reviews/ReviewCard";
 
-const testimonials = [
-  {
-    name: "Ahmed Al Mansoori",
-    role: "CEO, Emirates Tech Solutions",
-    content:
-      "Outstanding service! Marha Passengers Transportation LLC has been our trusted partner for corporate events and daily staff transportation. Always punctual, professional, and reliable.",
-    rating: 5,
-  },
-  {
-    name: "Sarah Johnson",
-    role: "Event Manager",
-    content:
-      "We used their services for our company's annual conference. The fleet was immaculate, drivers were courteous, and everything ran like clockwork. Highly recommended!",
-    rating: 5,
-  },
-  {
-    name: "Mohammed Hassan",
-    role: "Tourist from Saudi Arabia",
-    content:
-      "Explored Dubai with their luxury bus service. The comfort level was exceptional, and our driver was knowledgeable about all the best spots. Worth every dirham!",
-    rating: 5,
-  },
-];
+interface Review {
+  id: string;
+  name: string;
+  message: string;
+  rating: number;
+  created_at: string;
+}
 
 const Testimonials = () => {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadReviews = async () => {
+      const { data, error } = await supabase
+        .from("reviews")
+        .select("id, name, message, rating, created_at")
+        .eq("status", "active")
+        .order("created_at", { ascending: false });
+
+      if (!error) {
+        setReviews(data || []);
+      }
+      setLoading(false);
+    };
+
+    loadReviews();
+  }, []);
+
+  const marqueeItems = reviews.length > 0 ? [...reviews, ...reviews] : [];
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -39,35 +47,45 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={testimonial.name}
-              className="p-6 shadow-card hover-lift bg-card relative"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/20" />
-              
-              <div className="flex items-center space-x-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-primary fill-primary" />
+        {/* Testimonials Marquee */}
+        {loading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <Card
+                key={`loading-${index}`}
+                className="p-6 shadow-card bg-card relative animate-pulse"
+              >
+                <div className="h-5 w-28 bg-muted rounded mb-4" />
+                <div className="h-4 w-full bg-muted rounded mb-2" />
+                <div className="h-4 w-11/12 bg-muted rounded mb-2" />
+                <div className="h-4 w-9/12 bg-muted rounded mb-6" />
+                <div className="h-5 w-32 bg-muted rounded" />
+              </Card>
+            ))}
+          </div>
+        ) : reviews.length === 0 ? (
+          <Card className="p-6 shadow-card bg-card text-center">
+            <p className="text-muted-foreground font-inter">
+              No reviews yet. Be the first to share your experience.
+            </p>
+          </Card>
+        ) : (
+          <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2">
+            <div className="relative overflow-x-hidden overflow-y-visible py-8 [mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)] [-webkit-mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)]">
+              <div className="flex w-max gap-6 animate-marquee hover:[animation-play-state:paused]">
+                {marqueeItems.map((review, index) => (
+                  <ReviewCard
+                    key={`${review.id}-${index}`}
+                    name={review.name}
+                    message={review.message}
+                    rating={review.rating}
+                    className="h-full w-[320px] md:w-[360px] lg:w-[380px] shrink-0"
+                  />
                 ))}
               </div>
-
-              <p className="text-muted-foreground font-inter text-sm leading-relaxed mb-6 relative z-10">
-                "{testimonial.content}"
-              </p>
-
-              <div>
-                <p className="font-playfair font-bold text-foreground text-lg">
-                  {testimonial.name}
-                </p>
-                <p className="text-sm text-muted-foreground font-inter">{testimonial.role}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

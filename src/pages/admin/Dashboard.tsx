@@ -11,6 +11,7 @@ import BookingsManagement from '@/components/admin/BookingsManagement';
 import PricingManagement from '@/components/admin/PricingManagement';
 import InquiriesManagement from '@/components/admin/InquiriesManagement';
 import AnalyticsDashboard from '@/components/admin/AnalyticsDashboard';
+import ReviewsManagement from '@/components/admin/ReviewsManagement';
 
 export default function Dashboard() {
   const [loading, setLoading] = useState(true);
@@ -148,12 +149,13 @@ export default function Dashboard() {
 
         {/* Management Tabs */}
         <Tabs defaultValue="analytics" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5">
+          <TabsList className="grid w-full grid-cols-6">
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
             <TabsTrigger value="fleet">Fleet</TabsTrigger>
             <TabsTrigger value="pricing">Pricing</TabsTrigger>
             <TabsTrigger value="bookings">Bookings</TabsTrigger>
             <TabsTrigger value="inquiries">Inquiries</TabsTrigger>
+            <TabsTrigger value="reviews">Reviews</TabsTrigger>
           </TabsList>
 
           <TabsContent value="analytics">
@@ -174,6 +176,10 @@ export default function Dashboard() {
 
           <TabsContent value="inquiries">
             <InquiriesManagement onUpdate={loadStats} />
+          </TabsContent>
+
+          <TabsContent value="reviews">
+            <ReviewsManagement />
           </TabsContent>
         </Tabs>
       </main>

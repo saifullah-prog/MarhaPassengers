@@ -150,6 +150,37 @@ for all
 using (public.is_admin())
 with check (public.is_admin());
 
+-- Reviews
+create table if not exists public.reviews (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  message text not null,
+  rating integer not null default 5 check (rating >= 1 and rating <= 5),
+  status text not null default 'inactive'
+    check (status in ('active', 'inactive')),
+  created_at timestamptz not null default now()
+);
+
+alter table public.reviews enable row level security;
+
+create policy "Public insert reviews"
+on public.reviews
+for insert
+to anon, authenticated
+with check (true);
+
+create policy "Public read active reviews"
+on public.reviews
+for select
+using (status = 'active');
+
+create policy "Admins manage reviews"
+on public.reviews
+for all
+using (public.is_admin())
+with check (public.is_admin());
+
 -- Storage (vehicle-images bucket + policies)
 -- These statements may require Storage UI or elevated role to apply.
 insert into storage.buckets (id, name, public)

@@ -92,7 +92,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
   }
 
   /* Smooth scrolling */
@@ -132,5 +132,18 @@ All colors MUST be HSL.
   /* Luxury button hover effect */
   .hover-lift {
     @apply transition-smooth hover:-translate-y-1 hover:shadow-luxury;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 70s linear infinite;
   }
 }
