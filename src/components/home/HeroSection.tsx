@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Luxury buses with Dubai skyline"
+          alt="Luxury buses with UAE skyline"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
@@ -33,7 +33,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-secondary-foreground/90 mb-8 max-w-2xl mx-auto font-inter">
-            Premium buses, corporate transfers, and VIP transportation services across Dubai. Travel in style with professional chauffeurs and immaculate vehicles.
+            Premium buses, corporate transfers, and VIP transportation services across UAE. Travel in style with professional chauffeurs and immaculate vehicles.
           </p>
 
           {/* CTA Buttons */}

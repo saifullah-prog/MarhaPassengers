@@ -15,7 +15,7 @@ const services = [
   {
     icon: MapPin,
     title: "City Tours",
-    description: "Explore Dubai's iconic landmarks in comfort with our guided luxury tours.",
+    description: "Explore UAE iconic landmarks in comfort with our guided luxury tours.",
   },
   {
     icon: Users,

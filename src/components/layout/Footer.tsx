@@ -26,7 +26,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Premier luxury transport services in Dubai, offering premium vehicles and professional chauffeurs for all your transportation needs.
+              Premier luxury transport services in UAE, offering premium vehicles and professional chauffeurs for all your transportation needs.
             </p>
           </div>
 

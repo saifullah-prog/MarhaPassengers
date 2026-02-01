@@ -115,7 +115,7 @@ const Terms = () => {
                   <div>
                     <h2 className="text-3xl font-playfair font-bold text-foreground mb-4">9. Governing Law</h2>
                     <p>
-                      These terms are governed by the laws of the United Arab Emirates. Any disputes shall be resolved in the courts of Dubai.
+                      These terms are governed by the laws of the United Arab Emirates. Any disputes shall be resolved in the courts of UAE.
                     </p>
                   </div>
 

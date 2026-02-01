@@ -327,7 +327,7 @@ const VehicleDetail = () => {
                           value={formData.pickup}
                           onChange={handleChange}
                           required
-                          placeholder="Dubai Marina"
+                          placeholder="UAE Marina"
                           className="mt-1"
                         />
                       </div>
@@ -339,7 +339,7 @@ const VehicleDetail = () => {
                           value={formData.dropoff}
                           onChange={handleChange}
                           required
-                          placeholder="Dubai Mall"
+                          placeholder="UAE Mall"
                           className="mt-1"
                         />
                       </div>

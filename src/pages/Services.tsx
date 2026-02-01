@@ -34,7 +34,7 @@ const services = [
   {
     icon: MapPin,
     title: "City Tours",
-    description: "Explore Dubai's iconic landmarks in comfort with our guided luxury tours and customizable itineraries.",
+    description: "Explore UAE iconic landmarks in comfort with our guided luxury tours and customizable itineraries.",
     features: [
       "Knowledgeable guides",
       "Custom itineraries",

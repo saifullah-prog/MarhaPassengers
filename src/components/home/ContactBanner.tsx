@@ -12,7 +12,7 @@ const ContactBanner = () => {
             <span className="block text-primary">Luxury Transportation?</span>
           </h2>
           <p className="text-lg text-secondary-foreground/80 mb-8 font-inter">
-            Book your premium transport today and travel in unmatched comfort and style across Dubai.
+            Book your premium transport today and travel in unmatched comfort and style across UAE.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

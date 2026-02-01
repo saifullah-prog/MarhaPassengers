@@ -211,7 +211,7 @@ export default function PricingManagement() {
                   id="city_area"
                   value={formData.city_area}
                   onChange={(e) => setFormData({ ...formData, city_area: e.target.value })}
-                  placeholder="e.g., Dubai Marina"
+                  placeholder="e.g., UAE Marina"
                   required
                 />
               </div>
