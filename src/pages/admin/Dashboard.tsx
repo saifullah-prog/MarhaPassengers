@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase, isSupabaseConfigured } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -25,6 +25,10 @@ export default function Dashboard() {
   const { toast } = useToast();
 
   useEffect(() => {
+    if (!isSupabaseConfigured) {
+      setLoading(false);
+      return;
+    }
     checkAuth();
     loadStats();
   }, []);
@@ -82,6 +86,28 @@ export default function Dashboard() {
     });
     navigate('/login');
   };
+
+  if (!isSupabaseConfigured) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-muted/20 p-4">
+        <Card className="w-full max-w-lg">
+          <CardHeader>
+            <CardTitle>Admin portal not connected</CardTitle>
+            <CardDescription>
+              Supabase environment variables are missing for this deployment.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>In Vercel → Project Settings → Environment Variables, add:</p>
+            <pre className="rounded-md bg-muted p-3 text-xs text-foreground">
+VITE_SUPABASE_URL=https://yjzlwdpgfsfasxmavxvt.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key</pre>
+            <p>Then redeploy. These must be set for the Production environment.</p>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   if (loading) {
     return (
