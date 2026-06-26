@@ -12,6 +12,7 @@ import PricingManagement from '@/components/admin/PricingManagement';
 import InquiriesManagement from '@/components/admin/InquiriesManagement';
 import AnalyticsDashboard from '@/components/admin/AnalyticsDashboard';
 import ReviewsManagement from '@/components/admin/ReviewsManagement';
+import AccountSettings from '@/components/admin/AccountSettings';
 
 export default function Dashboard() {
   const [loading, setLoading] = useState(true);
@@ -175,13 +176,14 @@ VITE_SUPABASE_ANON_KEY=your-anon-key</pre>
 
         {/* Management Tabs */}
         <Tabs defaultValue="analytics" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-6">
+          <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 lg:grid-cols-7">
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
             <TabsTrigger value="fleet">Fleet</TabsTrigger>
             <TabsTrigger value="pricing">Pricing</TabsTrigger>
             <TabsTrigger value="bookings">Bookings</TabsTrigger>
             <TabsTrigger value="inquiries">Inquiries</TabsTrigger>
             <TabsTrigger value="reviews">Reviews</TabsTrigger>
+            <TabsTrigger value="account">Account</TabsTrigger>
           </TabsList>
 
           <TabsContent value="analytics">
@@ -206,6 +208,10 @@ VITE_SUPABASE_ANON_KEY=your-anon-key</pre>
 
           <TabsContent value="reviews">
             <ReviewsManagement />
+          </TabsContent>
+
+          <TabsContent value="account">
+            <AccountSettings />
           </TabsContent>
         </Tabs>
       </main>
